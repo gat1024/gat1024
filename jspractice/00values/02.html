@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" type="text/css" href="../common/style.css"/>
+<script src="../common/util.js"></script>
+</head>
+<body data-ex="0.2">
+<div include-html="../common/header.html"></div>
+<h1>Data Types</h1>
+<p>
+Everything is an object in Javascript. Some are primitives provided by Javascript itself.
+These primitives each have a type that determines the kind of values they may hold.
+<pre>
+5                 // this is a number
+'Larry'           // this is a string
+true              // this is a boolean 
+9007199254740991n // this is a big integer
+</pre>
+<p>
+Provide an example of a number.
+</p>
+<div include-html="../common/codearea.html"></div>
+
+<script>
+includeHTML();
+
+function doit () {
+	let code = getUserCode ();
+
+	clearMessages ();
+	badIf(typeof (test (code)) !== 'number', "Nope. Try again.");
+	goodIf(typeof (test (code)) === 'number', "Looks good!");
+	badIf(test(code) === 5, "But try a different string");
+}
+</script>
+</body>
