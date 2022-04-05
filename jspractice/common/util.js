@@ -32,7 +32,6 @@ let pages = [
 	"5.1", "../05functions/01.html",
 	"5.2", "../05functions/02.html",
 	"5.3", "../05functions/03.html",
-	"5.4", "../05functions/04.html",
 ];
 
 async function includeHTML() {
