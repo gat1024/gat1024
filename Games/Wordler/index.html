@@ -2486,17 +2486,18 @@ function checkGuess () {
 }
 
 function updateGame () {
-    if (turn === 6) {
-        msg.innerHTML = `You Lose. The word was ${word}`;
-    }
 
-    else if (guess.toLocaleLowerCase() === word){
+    if (guess.toLocaleLowerCase() === word){
         msg.innerHTML = `You Win!`;
     }
 
     else {
         turn += 1;
         guess="";
+
+        if (turn === 6) {
+            msg.innerHTML = `You Lose. The word was ${word}`;
+        }
     }
 }
 
